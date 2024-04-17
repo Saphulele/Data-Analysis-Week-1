@@ -63,4 +63,29 @@ Series:
 
 **Pandas Series:** A one-dimensional labeled array capable of holding any data type. It is often used to represent a single column of a DataFrame or a single dimension of data.
 
+                                    **NORMALISATION IN DATA ANALYSIS**
+
+
+Normalization is a process used in database design to organize data efficiently and reduce redundancy. It involves breaking down a database schema into smaller, more manageable parts and applying certain rules to ensure data integrity. The primary goals of normalization are to minimize data redundancy and dependency, thereby improving data consistency and reducing the chances of anomalies during data manipulation.
+
+
+
+**First Normal Form (1NF):**
+
+Each table cell should contain a single, atomic value. There should be no repeating groups or arrays within a row.
+Example: If you have a table for storing customer information, each attribute (such as name, address, phone number) should be stored in separate columns, and each column should contain only one value.
+
+**Second Normal Form (2NF):**
+
+**Building upon 1NF**, every non-prime attribute (attributes not part of the primary key) should be fully functionally dependent on the primary key.
+In simpler terms, every non-key attribute should be fully dependent on the entire primary key, not just a part of it.
+Example: If you have a composite primary key made up of multiple columns, each non-key attribute should be dependent on all of these columns, not just some of them.
+
+**Third Normal Form (3NF):**
+
+**Building upon 2NF**, no transitive dependency should exist.
+Transitive dependency occurs when a non-prime attribute is functionally dependent on another non-prime attribute, rather than the primary key.
+**Example: If A → B and B → C, then A should not directly or indirectly determine C. C should be moved to a separate table.**
+
+Normalization helps maintain data integrity by reducing redundancy and inconsistencies, making it easier to insert, update, and delete data without encountering anomalies. However, it's essential to strike a balance between normalization and performance, as excessive normalization can lead to complex query operations and slower performance, especially in large databases
 
